@@ -22,13 +22,5 @@ app.use(expressValidator());
 // Routes
 require('./controllers/posts.js')(app);
 
-app.get('/', (req, res) => {
-    res.render('posts-new')
-})
-
-app.get('/posts/new', (req, res) => {
-    res.render('posts-new')
-})
-
 // Server
 app.listen(port, () => console.log(`Reddit.js listening on port ${port}!`))
