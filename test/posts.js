@@ -18,7 +18,8 @@ describe('Posts', function() {
   const newPost = {
       title: 'post title',
       url: 'https://www.google.com',
-      summary: 'post summary'
+      summary: 'post summary',
+      subreddit: { type: String, required: true }
   };
 
   it("should create with valid attributes at POST /posts/new", function (done) {
