@@ -21,6 +21,7 @@ app.use(expressValidator());
 
 // Routes
 require('./controllers/posts.js')(app);
+require('./controllers/comments.js')(app);
 
 // Server
 app.listen(port, () => console.log(`Reddit.js listening on port ${port}!`))
