@@ -24,3 +24,5 @@ require('./controllers/posts.js')(app);
 
 // Server
 app.listen(port, () => console.log(`Reddit.js listening on port ${port}!`))
+
+module.exports = app;
