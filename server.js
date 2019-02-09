@@ -1,6 +1,10 @@
 // Requre dotenv
 require('dotenv').config();
 
+// Auth
+var cookieParser = require('cookie-parser');
+const jwt = require('jsonwebtoken');
+
 // Initialize Libraries
 const express = require('express')
 const app = express()
@@ -21,6 +25,8 @@ app.set('view engine', 'handlebars');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(expressValidator());
+
+app.use(cookieParser());
 
 // Routes
 require('./controllers/posts.js')(app);
