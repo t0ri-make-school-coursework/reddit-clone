@@ -1,3 +1,6 @@
+// Requre dotenv
+require('dotenv').config();
+
 // Initialize Libraries
 const express = require('express')
 const app = express()
@@ -22,6 +25,7 @@ app.use(expressValidator());
 // Routes
 require('./controllers/posts.js')(app);
 require('./controllers/comments.js')(app);
+require('./controllers/auth.js')(app);
 
 // Server
 app.listen(port, () => console.log(`Reddit.js listening on port ${port}!`))
